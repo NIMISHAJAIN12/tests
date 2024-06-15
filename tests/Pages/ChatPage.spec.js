@@ -18,7 +18,7 @@ class ChatPage {
     await this.page.press('//div[@aria-label="Message"]', 'Enter');
     await this.page.waitForTimeout(2000);
     await this.page.click('(//a[@role="link"])[9]');
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForTimeout(2000);
     await this.page.click('svg[aria-label="Options"]');
     await this.page.click('button:nth-child(6)');
   }
